@@ -1,0 +1,16 @@
+data_dir: /home/jayasudha/Desktop/learning-vector.dev
+
+sources:
+  file_source:
+    type: file
+    include:
+      - /home/jayasudha/Desktop/learning-vector.dev/input.txt
+
+sinks:
+  file_sink:
+    type: file
+    inputs:
+      - file_source  # Specify the source that the sink will consume data from
+    path: /home/jayasudha/Desktop/learning-vector.dev/output.txt
+    encoding:
+      codec: text
